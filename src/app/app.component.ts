@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = '';
+  firstName = '';
+  lastName = '';
+  ngOnInit() {
+    this.firstName = 'Kevin';
+    this.lastName = 'Pietersen';
+  }
+  getNameValues(firstName, lastName) {
+    this.title = `${firstName} ${lastName}`; 
+  }
 }
